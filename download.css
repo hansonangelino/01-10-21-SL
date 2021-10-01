@@ -1,0 +1,52 @@
+.download_1 {
+    display: flex;
+    margin: 4em;
+    position: fixed;
+    max-width: 100%;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    -webkit-border-radius: 24px;
+    border-radius: 24px;
+    background: #ececec;
+    -webkit-box-shadow: 12px 12px 24px #c9c9c9, -12px -12px 24px #ffffff;
+    box-shadow: 12px 12px 24px #c9c9c9, -12px -12px 24px #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.text_1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex: 3;
+    width: 100%;
+}
+.button {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex: 1;
+    width: 100%;
+}
+.button a{
+    text-decoration: none;
+    color: white;
+    padding: 1.5em;
+    font-size: 18px;
+    border-radius: 18px;
+    background: #288c21;
+    box-shadow: inset 20px 20px 60px #22771c,
+                inset -20px -20px 60px #2ea126;
+    transition: 0.25s;
+}
+.button a:hover{
+    transition: 0.5s;
+    border-radius: 100px;
+    background: #107293;
+    box-shadow: inset 20px 20px 60px #0e617d,
+                inset -20px -20px 60px #1283a9;
+}
