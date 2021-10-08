@@ -7,35 +7,70 @@
     <title>中國文學欣賞</title>
     <link rel="stylesheet" href="download.css">
     <style>
-        body {
-            background: #ececec;
-            margin: 0;
+        .container {
+            padding: 2em;
+            color: rgb(48, 48, 48);
+            box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.15);
+            -webkit-box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.15);
+            -moz-box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.15);
         }
-        .wrapper {
-            margin: 1em;
+        a {
+            text-decoration: none;
+
+        }
+        body, h1, p{
+            margin: 0;
         }
         .content {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
+            margin-top: 2em;
         }
         .content > div{
             padding: 2em;
         }
         .sidebar {
+            padding: 0;
             display: flex;
             flex: 1;
-            background-color: rgb(255, 255, 0);
+            flex-direction: column;
             text-decoration: none;
+            border-width: 0.75px;
+        }
+        .sidebar a{
+            display: flex;
+            color: rgb(48, 48, 48);
+            font-size: 18px;
+            max-width: 100%;
+            border-style: solid;
+            border-color: rgb(68, 68, 68);
+            border-width: 0.75px;
+            transition: 0.5s;
+            height: 100%;
+            justify-content: center;
             align-items: center;
+        }
+        .sidebar a:hover{
+            background-color: darkcyan;
+            color: white;
+            transition: 0.5s;
         }
         .main {
             display: flex;
             flex: 3;
-            background-color: rgb(41, 41, 41);
-            color: white;
+            color: rgb(48, 48, 48);
             align-items: center;
+            border: solid;
+            border-color: rgb(68, 68, 68);
+            border-width: 0.75px;
+            margin-right: 32px;
+            height: 280px;
+            font-size: 18px;
+        }
+        .footer {
+            margin-top: 2em;
         }
     </style>
 </head>
@@ -46,17 +81,17 @@
         </div>
         <div class="content">
             <div class="sidebar">
-                <ul style="margin: 0;">
-                    <li><a href="">唐詩</a></li>
-                    <li><a href="">末詞</a></li>
-                    <li><a href="">元曲</a></li>
-                </ul>
+                <a href="#" onclick="changeText1()">唐詩</a>
+                <a href="#" onclick="changeText2()">末詞</a>
+                <a href="#" onclick="changeText3()">元曲</a>
             </div>
-            <div class="main">
-                <p>中國文化博大精深，尤以唐詩宋詞，元曲最為精炒，其中唐詩的結構工整，要求押韻，平人等格律，
-                又分為四句的絕句和八句的律詩，而且唐詩的題材亦相當多元化，從抒發一己之情感，到反映社會現實，
-                皆有傑出的作品。
-                </p>
+            <div class="main" id="link">
+                <span id="text">
+                    <p>中國文化博大精深，尤以唐詩宋詞，元曲最為精炒，其中唐詩的結構工整，要求押韻，平人等格律，
+                        又分為四句的絕句和八句的律詩，而且唐詩的題材亦相當多元化，從抒發一己之情感，到反映社會現實，
+                        皆有傑出的作品。
+                    </p>
+                </span>
             </div>
         </div>
         <div class="footer" style="text-align: center;">
@@ -64,6 +99,18 @@
             <p>Copyright Hanson angelino - 2021</p>
         </div>
     </div>
+
+    <script>
+        function changeText1() {
+            document.getElementById("link").style.backgroundColor = '#00ccff';
+        }
+        function changeText2() {
+            document.getElementById("link").style.backgroundColor = '#33cc33';
+        }
+        function changeText3() {
+            document.getElementById("link").style.backgroundColor = '#ffcc00';
+        }
+    </script>
     <div class="download_1">
         <div class="text_1">
             <h2>Want to download or copy the code for this project? <br> Click the "Download" button</h2>
